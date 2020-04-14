@@ -27,3 +27,22 @@ $ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq > Rat_to_Mouse_noe_list.txt
 $ wc -l Rat_to_Mouse_noe_list.txt
       # 2824 out of 2825 Rat genes has blast hit.
 ```
+
+## step 4. extract ortholog sequences
+
+This step extract sequences for rat and mouse gene pairs (Rat_to_Mouse_noe_list.txt). It generate 2824 files (1_genes.txt, 2_genes.txt...)
+```
+$ perl find_list_gene.pl
+```
+
+## step 5. alignment
+
+This step use software **muscle v3.8.1551** to do the alignment. It generate 2824 files under OUT/ directory (1_aln.txt, 2_aln.txt...)
+```
+$ makedir OUT
+
+$ perl muscle.pl
+```
+
+## step 6. extract cycteine position information
+
