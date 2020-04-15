@@ -16,7 +16,7 @@ $ perl extract_RAT_1.pl
 
 ## step 3. blast search
 
-This step blast Rattus_norvegicus_extract.fasta (query) against Mus_musculus.fasta (target) and only keep the best blast hit. Output file is Rat_to_Mouse_noe_list.txt.
+This step blasts Rattus_norvegicus_extract.fasta (query) against Mus_musculus.fasta (target) and only keep the best blast hit. Output file is Rat_to_Mouse_noe_list.txt.
 ```
 $ makeblastdb -in Mus_musculus.fasta -dbtype prot -out Mus.db
 
@@ -30,14 +30,14 @@ $ wc -l Rat_to_Mouse_noe_list.txt
 
 ## step 4. extract ortholog sequences
 
-This step extract sequences for rat and mouse gene pairs (Rat_to_Mouse_noe_list.txt) from this two files (Rattus_norvegicus_extract.fasta & Mus_musculus.fasta). It generate 2824 files (1_genes.txt, 2_genes.txt...)
+This step extracts sequences for rat and mouse gene pairs (Rat_to_Mouse_noe_list.txt) from this two files (Rattus_norvegicus_extract.fasta & Mus_musculus.fasta). It generates 2824 files (1_genes.txt, 2_genes.txt...)
 ```
 $ perl find_list_gene.pl
 ```
 
 ## step 5. alignment
 
-This step use software **muscle v3.8.1551** to do the alignment. It generate 2824 files under OUT/ directory (1_aln.txt, 2_aln.txt...)
+This step uses software **muscle v3.8.1551** to do the alignment. It generate 2824 files under OUT/ directory (1_aln.txt, 2_aln.txt...)
 ```
 $ makedir OUT
 
@@ -46,7 +46,7 @@ $ perl muscle.pl
 
 ## step 6. extract cycteine position information
 
-This step extract cycteine position form 2824 \*\_aln.txt alignment files and output a excel file. The output file is excel file "cycteine_pos_summary.txt".
+This step extracts cycteine position form 2824 \*\_aln.txt alignment files and output a excel file. The output file is excel file "cycteine_pos_summary.txt".
 
 ```
 $ perl extract_cycteine.pl
