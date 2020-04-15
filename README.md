@@ -25,7 +25,7 @@ $ blastp -db Mus.db -query Rattus_norvegicus_extract.fasta -out Rat_to_Mouse_noe
 $ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq | sort -k2 > Rat_to_Mouse_noe_list.txt
 
 $ wc -l Rat_to_Mouse_noe_list.txt
-      # 2824 out of 2825 Rat genes has blast hit.
+      # 2824 out of 2825 Rat genes have blast hit.
 ```
 
 ## step 4. extract ortholog sequences
