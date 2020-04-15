@@ -46,7 +46,7 @@ $ perl muscle.pl
 
 ## step 6. extract cycteine position information
 
-This step extracts cycteine position form 2824 \*\_aln.txt alignment files and output a excel file. The output file is excel file "cycteine_pos_summary.txt".
+This step extracts cycteine position form 2824 \*\_aln.txt alignment files and output an excel file "cycteine_pos_summary.txt". Position indicates the position information in the respective protein sequence. 
 
 ```
 $ perl extract_cycteine.pl
