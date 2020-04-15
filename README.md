@@ -30,7 +30,7 @@ $ wc -l Rat_to_Mouse_noe_list.txt
 
 ## step 4. extract ortholog sequences
 
-This step extract sequences for rat and mouse gene pairs (Rat_to_Mouse_noe_list.txt). It generate 2824 files (1_genes.txt, 2_genes.txt...)
+This step extract sequences for rat and mouse gene pairs (Rat_to_Mouse_noe_list.txt) from this two files (Rattus_norvegicus_extract.fasta & Mus_musculus.fasta). It generate 2824 files (1_genes.txt, 2_genes.txt...)
 ```
 $ perl find_list_gene.pl
 ```
