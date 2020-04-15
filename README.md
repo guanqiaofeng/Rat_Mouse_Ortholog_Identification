@@ -67,31 +67,8 @@ A0A0G2K2B8_RAT	125	1433F_MOUSE	97
 
 $ cut -f 1 cycteine_pos_summary.txt | sort | uniq | wc -l
       2813
-      # 2813 out of 2824 rat genes have cycteine position in ortholog with rat genes.
+      # 2812 out of 2824 rat genes have cycteine position in ortholog with rat genes.
 ```
-The left eleven rat genes are: 
-TSPO_RAT
+The left 12 rat genes are:
 
-Rat_gene
-
-PPIB_RAT
-
-M0RCJ6_RAT
-
-M0RBQ5_RAT
-
-M0R523_RAT
-
-H4_RAT
-
-GSTA4_RAT
-
-F1M0R2_RAT
-
-D3ZE02_RAT
-
-A0A0G2JUA5_RAT
-
-A0A0G2JU96_RAT
-
-A0A0G2JT56_RAT
+TSPO_RAT, PPIB_RAT, M0RCJ6_RAT, M0RBQ5_RAT, M0R523_RAT, H4_RAT, GSTA4_RAT, F1M0R2_RAT, D3ZE02_RAT, A0A0G2JUA5_RAT, A0A0G2JU96_RAT, A0A0G2JT56_RAT
