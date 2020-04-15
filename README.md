@@ -25,6 +25,7 @@ $ blastp -db Mus.db -query Rattus_norvegicus_extract.fasta -out Rat_to_Mouse_noe
 $ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq | sort -k2 > Rat_to_Mouse_noe_list.txt
 
 $ wc -l Rat_to_Mouse_noe_list.txt
+      2824
       # 2824 out of 2825 Rat genes have blast hit.
 ```
 The one rat gene which do not have blast hit in mouse database is "A0A0G2K786_RAT".
@@ -63,5 +64,22 @@ Rat_gene	Rat_pos	Mouse_gene	Mouse_pos
 1433F_RAT	112	1433F_MOUSE	112
 1433F_RAT	194	1433F_MOUSE	194
 A0A0G2K2B8_RAT	125	1433F_MOUSE	97
-```
 
+$ cut -f 1 cycteine_pos_summary.txt | sort | uniq | wc -l
+      2813
+      # 2813 out of 2824 rat genes have cycteine position in ortholog with rat genes.
+```
+The left eleven rat genes are: 
+TSPO_RAT
+Rat_gene
+PPIB_RAT
+M0RCJ6_RAT
+M0RBQ5_RAT
+M0R523_RAT
+H4_RAT
+GSTA4_RAT
+F1M0R2_RAT
+D3ZE02_RAT
+A0A0G2JUA5_RAT
+A0A0G2JU96_RAT
+A0A0G2JT56_RAT
