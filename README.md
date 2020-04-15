@@ -27,6 +27,7 @@ $ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq | sort -k2 > Rat_to_Mouse_noe_list.txt
 $ wc -l Rat_to_Mouse_noe_list.txt
       # 2824 out of 2825 Rat genes have blast hit.
 ```
+The one rat gene which do not have blast hit in mouse database is "A0A0G2K786_RAT".
 
 ## step 4. extract ortholog sequences
 
