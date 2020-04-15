@@ -22,7 +22,7 @@ $ makeblastdb -in Mus_musculus.fasta -dbtype prot -out Mus.db
 
 $ blastp -db Mus.db -query Rattus_norvegicus_extract.fasta -out Rat_to_Mouse_noe.txt -outfmt 6 -max_target_seqs 1
 
-$ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq > Rat_to_Mouse_noe_list.txt
+$ cut -f 1,2 Rat_to_Mouse_noe.txt | uniq | sort -k2 > Rat_to_Mouse_noe_list.txt
 
 $ wc -l Rat_to_Mouse_noe_list.txt
       # 2824 out of 2825 Rat genes has blast hit.
@@ -45,4 +45,22 @@ $ perl muscle.pl
 ```
 
 ## step 6. extract cycteine position information
+
+This step extract cycteine position form 2824 \*\_aln.txt alignment files and output a excel file. The output file is excel file "cycteine_pos_summary.txt".
+
+```
+$ perl extract_cycteine.pl
+
+$ head cycteine_pos_summary.txt
+Rat_gene	Rat_pos	Mouse_gene	Mouse_pos
+1433B_RAT	96	1433B_MOUSE	96
+1433B_RAT	191	1433B_MOUSE	191
+1433E_RAT	97	1433E_MOUSE	97
+1433E_RAT	98	1433E_MOUSE	98
+1433E_RAT	192	1433E_MOUSE	192
+1433F_RAT	97	1433F_MOUSE	97
+1433F_RAT	112	1433F_MOUSE	112
+1433F_RAT	194	1433F_MOUSE	194
+A0A0G2K2B8_RAT	125	1433F_MOUSE	97
+```
 
