@@ -1,5 +1,16 @@
 # Rat_to_Mouse
 
+Developer: Guanqiao Feng 
+2019
+
+Pipeline used in "Wang J*, Zhang T*, Johnston CJ, Kim SY, Gaffrey MJ, Chalupa D, Feng G, Qian WJ, McGraw MD, Ansong C. 2020. Protein thiol oxidation in the rat lung following e-cigarette exposure. Redox biology. 37: 101758."
+
+This pipeline compared cysteine sites identified in rats in the current study with cysteine sites identified in mice from a previous study (Nature Communication 9,2018,1581). These cysteine sites are subjected to oxidation in response to redox stress.
+
+It includes the following steps: data cleaning -> ortholog identification -> sequence alignment -> conserved and unique cysteine site identification.
+
+The study 'covered 6682 unique rat cysteine sites, among which 1805 sites were also characterized in mice.'"
+
 ## step 1. clean the fasta files
 
 This step takes input files (Rattus_norvegicus_UniProt_MoTrPAC_2017-10-20.fasta & M_musculus_Uniprot_SPROT_2017-04-12.fasta) and generate output files (Rattus_norvegicus.fasta & Mus_musculus.fasta). It cleans the name, puts sequence into one line, only keeps the first gene if multiple genes with the same name exist in the file (only for Rat file).
